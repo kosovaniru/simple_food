@@ -1,0 +1,26 @@
+body {
+  font-family: "Rubik" serif;
+  background-color: #f9faff;
+  color: $neutral-color;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto 120px;
+}
+
+.container-center {
+  text-align: center;
+}
+
+.btn-primary {
+  border-radius: 5px;
+  background-color: $accent-color;
+  color: #ffffff;
+  line-height: 1.3;
+  font-size: 18px;
+}

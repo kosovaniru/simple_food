@@ -1,12 +1,260 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Simple Food - твоя улюблена доставка</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a class="simple-food__logo" href="#" target="_blank">
+          <img class="simple-food__img" src="images/header/simple_food_logo.svg" alt="лого компанії ">
+        </a>
+
+        <nav class="header-menu">
+          <ul class="header-menu__list">
+            <li class="header-menu__item">
+              <a class="header-menu__link header-menu__link--active links-style" href="#" target="_blank">Головна</a>
+            </li>
   
+            <li class="header-menu__item">            
+              <a class="header-menu__link links-style" href="#" target="_blank">Страви</a>
+            </li>
+  
+            <li class="header-menu__item">            
+              <a class="header-menu__link links-style" href="#" target="_blank">Контакти</a>
+            </li>
+          </ul>
+
+          <ul class="header-icons__list">
+            <li class="header-icons__item">
+              <a class="header-icons__link icon-styles" href="#" target="_blank">
+                <svg fill="none" width="21" height="21" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+                  <ellipse class="icon__svg" cx="9.76663" cy="9.63009" stroke="currentColor" rx="8.98856" ry="8.88424" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path class="icon__svg" d="M16.0184 16.2708L19.5424 19.7448" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </li>
+  
+            <li class="header-icons__item">
+              <a class="header-icons__link icon-styles" href="#" target="_blank">
+                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="icon__svg" d="M1 1.17578L3.08 1.5316L4.04301 12.8715C4.12001 13.7976 4.90301 14.5082 5.84301 14.5053H16.752C17.649 14.5072 18.41 13.8549 18.537 12.9772L19.486 6.49532C19.592 5.77083 19.083 5.09872 18.351 4.99395C18.287 4.98505 3.414 4.98011 3.414 4.98011" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path class="icon__svg" d="M12.375 8.63337H15.1479" stroke="#363853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path class="icon__svg" fill-rule="evenodd" clip-rule="evenodd" d="M5.4043 17.9316C5.70527 17.9316 5.94824 18.1729 5.94824 18.4696C5.94824 18.7673 5.70527 19.0085 5.4043 19.0085C5.10333 19.0085 4.86035 18.7673 4.86035 18.4696C4.86035 18.1729 5.10333 17.9316 5.4043 17.9316Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path class="icon__svg" fill-rule="evenodd" clip-rule="evenodd" d="M16.6846 17.9316C16.9856 17.9316 17.2296 18.1729 17.2296 18.4696C17.2296 18.7673 16.9856 19.0085 16.6846 19.0085C16.3836 19.0085 16.1406 18.7673 16.1406 18.4696C16.1406 18.1729 16.3836 17.9316 16.6846 17.9316Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span class="header-icons__num">4</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="top">
+      <div class="container">
+        <div class="top-inner">
+          <div class="top-content">
+            <h1 class="top-content__title">
+              ДОСТАВКА 
+              <span class="top-content__time">ЗА  15 ХВИЛИН</span>
+            </h1>
+            <p class="top-content__text siple-food__text">
+              Найшвидший сервіс доставки їжі у вашому місті. Якщо запізнемось - то доставка за наш рахунок
+            </p>
+            <div class="top-content__btns">
+              <button class="btn-primary btn-styles btn-order">
+                Замовити
+              </button>
+              <a class="btn-detail links-style" href="#" target="_blank">
+                Детальніше
+              </a>
+            </div>
+          </div>
+          <img src="images/top/scooter_guy.png" alt="картинка кур'єра" class="top__img">
+        </div>
+      </div>
+    </section>
+
+    <section class="menu">
+      <div class="container container-center">
+        <h2 class="section-title">Популярне в категоріях</h2>
+        <div class="menu__content">
+          <ul class="menu-btn">
+            <li class="menu-btn__item btn-styles">
+              <button class="menu__btn menu__btn--burger" data-filter="all">Бургери</button>
+            </li>
+            <li class="menu-btn__item btn-styles">
+              <button class="menu__btn menu__btn--pizza" data-filter=".category-b">Піца</button>
+            </li>
+            <li class="menu-btn__item btn-styles">
+              <button class="menu__btn menu__btn--sandwich" data-filter=".category-c">Сендвічі</button>
+            </li>
+            <li class="menu-btn__item">
+              <button class="menu__btn menu__btn--asia" data-filter=".category-d">Азійська кухня</button>
+            </li>
+            <li class="menu-btn__item">
+              <button class="menu__btn menu__btn--set" data-filter=".category-e">Cети</button>
+            </li>
+          </ul>
+          <ul class="menu-dish">
+            <li class="menu-dish__item mix category-b">
+              <img class="menu-dish__img" src="images/menu/item_01.png" alt="фото чізбургера з листям салату">
+              <p class="menu-dish__title">Чізбургер з листям салату</p>
+              <p class="menu-dish__price">160 грн</p>
+              <button class="btn-cart btn-styles btn-primary">До кошика</button>
+            </li>
+
+            <li class="menu-dish__item mix category-c">
+              <img class="menu-dish__img" src="images/menu/item-2.jpg" alt="фото чізбургера з листям салату">
+              <p class="menu-dish__title">Біфбургер</p>
+              <p class="menu-dish__price">190 грн</p>
+              <button class="btn-cart  btn-styles btn-primary">До кошика</button>
+            </li>
+
+            <li class="menu-dish__item mix category-e">
+              <img class="menu-dish__img" src="images/menu/item-4.jpg" alt="фото чізбургера з листям салату">
+              <p class="menu-dish__title">Королівський чізбургер</p>
+              <p class="menu-dish__price">260 грн</p>
+              <button class="btn-cart btn-styles btn-primary">До кошика</button>
+            </li>
+
+            <li class="menu-dish__item mix category-c">
+              <img class="menu-dish__img" src="images/menu/item-3.jpg" alt="фото чізбургера з листям салату">
+              <p class="menu-dish__title">Чорний гамбургер</p>
+              <p class="menu-dish__price">199 грн</p>
+              <button class="btn-cart btn-styles btn-primary">До кошика</button>
+            </li>
+
+            <li class="menu-dish__item mix category-b">
+              <img class="menu-dish__img" src="images/menu/item-5.jpg" alt="фото чізбургера з листям салату">
+              <p class="menu-dish__title">Чікен бургер</p>
+              <p class="menu-dish__price">180 грн</p>
+              <button class="btn-cart btn-styles btn-primary">До кошика</button>
+            </li>
+
+            <li class="menu-dish__item mix category-e">
+              <img class="menu-dish__img" src="images/menu/item_01.png" alt="фото чізбургера з листям салату">
+              <p class="menu-dish__title">Чізбургер з листям салату</p>
+              <p class="menu-dish__price">160 грн</p>
+              <button class="btn-cart btn-styles btn-primary">До кошика</button>
+            </li>
+
+            <li class="menu-dish__item mix category-b">
+              <img class="menu-dish__img" src="images/menu/item-2.jpg" alt="фото чізбургера з листям салату">
+              <p class="menu-dish__title">Біфбургер</p>
+              <p class="menu-dish__price">190 грн</p>
+              <button class="btn-cart btn-styles btn-primary">До кошика</button>
+            </li>
+
+            <li class="menu-dish__item mix category-d">
+              <img class="menu-dish__img" src="images/menu/item-4.jpg" alt="фото чізбургера з листям салату">
+              <p class="menu-dish__title">Королівський чізбургер</p>
+              <p class="menu-dish__price">260 грн</p>
+              <button class="btn-cart btn-styles btn-primary">До кошика</button>
+            </li>
+
+            <li class="menu-dish__item mix category-c">
+              <img class="menu-dish__img" src="images/menu/item-3.jpg" alt="фото чізбургера з листям салату">
+              <p class="menu-dish__title">Чорний біфбургер</p>
+              <p class="menu-dish__price">199 грн</p>
+              <button class="btn-cart btn-styles btn-primary">До кошика</button>
+            </li>
+
+            <li class="menu-dish__item mix category-e">
+              <img class="menu-dish__img" src="images/menu/item-5.jpg" alt="фото чізбургера з листям салату">
+              <p class="menu-dish__title">Чікен бургер</p>
+              <p class="menu-dish__price">180 грн</p>
+              <button class="btn-cart btn-styles btn-primary">До кошика</button>
+            </li>
+          </ul>
+        </div>
+        <a class="btn-detail links-style more-link" href="#" target="_blank">Показати ще</a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <nav class="footer-menu">
+          <ul class="menu-subscribe">
+            <li class="menu-subscribe__item">
+              <a class="footer-logo simple-food__logo" target="_blank" href="#">
+                <img class="simple-food__img footer-logo_img" src="images/header/simple_food_logo.svg" alt="лого компанії ">
+              </a>
+            </li>
+
+            <li class="menu-subscribe__item">
+              <form action="#" class="simple-food__form">
+                <input class="simple-food__input" type="email" placeholder="Ваш e-mail" name="email">
+              </form>
+            </li>
+
+            <li class="menu-subscribe__item">
+              <button class="btn-primary subscribe-btn btn-styles">
+                <a class="btn-primary__link" href="#" target="_blank">
+                  <svg class="send__img" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.318 14.3001C10.0587 14.3001 9.81927 14.1616 9.70234 13.9406L7.66076 10.0822C7.54864 9.87034 7.5679 9.61684 7.71028 9.42119L11.0058 5.20009L6.53816 8.31359C6.33112 8.44879 6.06285 8.46569 5.83861 8.36039L1.75613 6.43184C1.51125 6.31549 1.36199 6.07304 1.37712 5.81434C1.39156 5.55564 1.56835 5.32944 1.82561 5.24039L14.895 0.690388C15.1461 0.603938 15.4288 0.660488 15.6193 0.840538C15.8092 1.01929 15.8711 1.28709 15.7782 1.52499L10.9632 13.875C10.8683 14.1181 10.6296 14.2851 10.3558 14.2988C10.3434 14.2994 10.3304 14.3001 10.318 14.3001Z" fill="white"/>
+                    </svg>                    
+                  Підписатися</a>
+              </button>
+            </li>
+          </ul>
+          
+          <ul class="footer-menu__list">
+            <li class="footer-menu__item">
+              <a class="footer-menu__link links-style" href="#" target="_blank">Як це працює</a>
+              <a class="footer-menu__link links-style" href="#" target="_blank">Продукти</a>
+              <a class="footer-menu__link links-style" href="#" target="_blank">Страви</a>
+              <a class="footer-menu__link links-style" href="#" target="_blank">Меню</a>
+            </li>
+
+            <li class="footer-menu__item">
+              <a class="footer-menu__link links-style" href="#" target="_blank">Про нас</a>
+              <a class="footer-menu__link links-style" href="#" target="_blank">Новини</a>
+              <a class="footer-menu__link links-style" href="#" target="_blank">Партнери</a>
+              <a class="footer-menu__link links-style" href="#" target="_blank">ЧаПи</a>
+            </li>
+
+            <li class="footer-menu__item">
+              <a class="footer-menu__link links-style" target="_blank" href="#">Застосунок</a>
+              <a class="footer-menu__link links-style" target="_blank" href="#">Блог</a>
+              <a class="footer-menu__link links-style" target="_blank" href="#">Що нового?</a>
+              <a class="footer-menu__link links-style" target="_blank" href="#">Мапа сайту</a>
+            </li>
+          </ul>
+
+          <ul class="menu-contacts">
+            <li class="menu-contacts__item">
+              <a class="menu-contacts__contact footer--location" target="_blank" href="#">вул. Т.Г.Шевченка, 1</a>
+              <a class="menu-contacts__contact footer--tel" target="_blank" href="tel">380501112233</a>
+              <a class="menu-contacts__contact footer--email" target="_blank" href="#">support@sfood.com</a>
+              <li class="item__social-media">
+                <a class="item__link facebook--link" href="#" target="_blank"></a>
+                <a class="item__link twitter--link" href="#" target="_blank"></a>
+                <a class="item__link inst--link" href="#" target="_blank"></a>
+              </li>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer-text">© 2023 Simple Food</p>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/mixitup.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
