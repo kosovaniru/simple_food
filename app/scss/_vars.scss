@@ -1,6 +1,12 @@
 $accent-color: #ff6838;
 $neutral-color: #31352b;
 $default-color: #363853;
+$white-color: #ffffff;
+$black-color: #000000;
+$bg-color: #f9faff;
+$active-color: #fff2ed;
+$background-light: #ececec;
+$medium-gray: #c2c2c2;
 
 %rubik-400 {
   font-family: "Rubik", sans-serif;
@@ -15,4 +21,10 @@ $default-color: #363853;
 %rubik-300 {
   font-family: "Rubik", sans-serif;
   font-weight: 300;
+}
+
+%rubik-latin {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-style: italic;
 }
