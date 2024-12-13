@@ -28,3 +28,35 @@ $medium-gray: #c2c2c2;
   font-weight: 400;
   font-style: italic;
 }
+
+%flex-style {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+%fl_al-style {
+  display: flex;
+  align-items: center;
+}
+
+%img-style {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+%logo {
+  display: block;
+  right: 0;
+  height: 2px;
+  width: 30px;
+  background-color: $default-color;
+}
+
+$breakpoints: (
+  "desktop": 1230px,
+  "tablet-2": 992px,
+  "tablet": 768px,
+  "phone": 560px,
+);
