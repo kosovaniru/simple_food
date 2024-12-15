@@ -260,3 +260,33 @@ body {
 .tac {
   text-align: center;
 }
+
+.breadcrumps {
+  &__list {
+    display: flex;
+    padding: 24px 0;
+    line-height: 1.2;
+    font-size: 14px;
+  }
+
+  &__item {
+    padding-right: 16px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url(../images/sprite.svg#path-arrow);
+      @extend %img-style;
+      right: 5px;
+      top: 3px;
+      width: 6px;
+      height: 10px;
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

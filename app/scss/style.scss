@@ -1000,14 +1000,17 @@
   background-color: rgba(255, 104, 56, 0.1);
 }
 
-.path-links {
-  padding: 24px 0;
-  line-height: 1.2;
-  font-size: 14px;
+.breadcrumps {
+  &__list {
+    padding: 24px 0;
+    line-height: 1.2;
+    font-size: 14px;
+  }
 }
 
 .catalog__inner {
   @extend %flex-style;
+  align-items: normal;
   gap: 10px;
 }
 
