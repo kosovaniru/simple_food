@@ -2,13 +2,21 @@ $(function() {
   $('.clients-slider').slick({
     dots: true,
     infinite: false,
-    prevArrow: $('.clients-nav__arrow--prev'),
-    nextArrow: $('.clients-nav__arrow--next'),
-    appendDots: $('.dots-wrap')
+    prevArrow: $('.clients-nav__btn--prev'),
+    nextArrow: $('.clients-nav__btn--next'),
+    appendDots: $('.dots-wrap'),
+    responsive: [
+      {
+        breakpoint: 560, 
+        settings: {
+          dots: false
+        }
+      }
+    ]
   });
 
   $(window).on('load resize', function() {
-    if ($(window).width() < 768) {
+    if ($(window).width() < 775) {
       $('.resturants:not(.slick-initialized)').slick({
         arrows: false,
         dots: true,
@@ -72,8 +80,70 @@ $(function() {
     $mobileMenu.removeClass('active');
     $bodyLock.removeClass('lock');
   })
+
+  $(document).on('click', function (event) {
+    if (
+      !$mobileMenu.is(event.target) &&
+      $mobileMenu.has(event.target).length === 0 &&
+      !$burger.is(event.target) && 
+      $burger.has(event.target).length === 0
+    ) {
+      $mobileMenu.removeClass('active');
+      $bodyLock.removeClass('lock')
+    }
+  });
+
+  $('.catalog__range').ionRangeSlider({
+    type: "double",
+    onStart: updateInputs,
+    onFinish: updateInputs,
+    onChange: updateInputs,
+  });
+
+  instance = $('.catalog__range').data("ionRangeSlider");
+
+  var instance,
+  min = 100,
+  max = 1000,
+  from = 150,
+  to = 700;
+
+  function updateInputs (data) {
+    from = data.from;
+      to = data.to;
+
+      $('.catalog__input--from').prop("value", from);
+      $('.catalog__input--to').prop("value", to);
+  }
+
+  $('.catalog__input--from').on("input", function () {
+    var val = $(this).prop("value");
+    
+    if (val < min) {
+        val = min;
+    } else if (val > to) {
+        val = to;
+    }
+    
+    instance.update({
+        from: val
+    });
 });
 
+$('.catalog__input--to').on("input", function () {
+    var val = $(this).prop("value");
+
+    if (val < from) {
+        val = from;
+    } else if (val > max) {
+        val = max;
+    }
+    
+    instance.update({
+        to: val
+    });
+});
+})
 
 
 const mixer = mixitup('.categories-content')

@@ -3,6 +3,11 @@ body {
   height: 100%;
 }
 
+.wrapper {
+  position: relative;
+  overflow-x: hidden;
+}
+
 body {
   @extend %rubik-400;
   background-color: #f9faff;
@@ -33,6 +38,7 @@ body {
     right: 0;
     top: 0;
     bottom: 0;
+    z-index: 3;
     background-color: rgba(0, 0, 0, 0.5);
     transition: background-color 0.3s ease, opacity 0.3s ease;
   }
@@ -49,6 +55,7 @@ body {
 .header__inner.sticky {
   padding: 20px 0;
   background-color: $white-color;
+  z-index: 3;
   @include mq("phone") {
     padding: 10px 0;
   }
@@ -91,6 +98,10 @@ body {
   max-width: 1200px;
   padding: 0 15px;
   margin: 0px auto;
+}
+
+.path {
+  background-color: rgba(255, 104, 56, 0.1);
 }
 
 .section-title {
