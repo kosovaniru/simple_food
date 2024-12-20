@@ -1,4 +1,6 @@
 $(function() {
+  $('.catalog__food-select').styler();
+
   $('.clients-slider').slick({
     dots: true,
     infinite: false,
@@ -128,22 +130,23 @@ $(function() {
     instance.update({
         from: val
     });
-});
 
-$('.catalog__input--to').on("input", function () {
-    var val = $(this).prop("value");
 
-    if (val < from) {
-        val = from;
-    } else if (val > max) {
-        val = max;
-    }
-    
-    instance.update({
-        to: val
-    });
-});
+  $('.catalog__input--to').on("input", function () {
+      var val = $(this).prop("value");
+
+      if (val < from) {
+          val = from;
+      } else if (val > max) {
+          val = max;
+      }
+      
+      instance.update({
+          to: val
+      });
+  });
 })
+});
 
 
 const mixer = mixitup('.categories-content')
