@@ -62,7 +62,7 @@ body {
 }
 
 .main {
-  margin-top: 159px;
+  margin-top: 156px;
   flex-grow: 1;
   @include mq("dekstop") {
     margin-top: 130px;
@@ -273,12 +273,10 @@ body {
 }
 
 .breadcrumps {
-  &__list {
-    display: flex;
-    padding: 24px 0;
-    line-height: 1.2;
-    font-size: 14px;
-  }
+  display: flex;
+  padding: 24px 0;
+  line-height: 1.2;
+  font-size: 14px;
 
   &__item {
     padding-right: 16px;
