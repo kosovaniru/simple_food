@@ -45,12 +45,14 @@ $(function() {
     normalFill: "#C1C1C1",
     ratedFill: "#FFB800",
     readOnly: true,
-  })
+    starSvg: '<svg><use xlink:href="images/sprite.svg#star"></use></svg>'
+  }),
 
   $(".comments-form__star").rateYo ({
     starWidth: "16px",
     normalFill: "#C1C1C1",
     ratedFill: "#FFB800",
+    starSvg: '<svg><use xlink:href="images/sprite.svg#star"></use></svg>'
   })
 
   $('.interest__slider').slick({
@@ -213,6 +215,10 @@ $('.product__slider').slick({
   ]
 });
 
+$('.product__slider').on('afterChange', function () {
+  Fancybox.bind("[data-fancybox='gallery']");
+});
+
 $('.tabs__top-link').on('click', function(e) {
   e.preventDefault();
   $('.tabs__top-link').removeClass('tabs__top-link--active');
@@ -220,6 +226,17 @@ $('.tabs__top-link').on('click', function(e) {
   $('.tabs__content-item').removeClass('tabs__content-item--active');
   $($(this).attr('href')).addClass('tabs__content-item--active');
 });
+
+Fancybox.bind("[data-fancybox='gallery']", {
+  Thumbs: {
+    autoStart: true, 
+  },
+  Toolbar: {
+    display: ["zoom", "close"],
+  },
+  animationEffect: "zoom-in-out",
+});
+
 })
 
 
