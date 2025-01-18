@@ -68,7 +68,7 @@ function images() {
 		  ]
 	  })
   ]))
-  .pipe(dest('dist/images'))
+  .pipe(dest('docs/images'))
 }
 
 function build() {
