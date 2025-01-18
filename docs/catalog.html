@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог - Simple Food</title>
+  <link rel="icon" href="images/favicon/favicon-96x96.png" sizes="96x96" type="image/x-icon"/>
+  <link rel="icon" href="images/favicon/favicon.svg" type="image/x-icon" />
+  <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" type="image/x-icon"/>
+  <link rel="manifest" href="images/favicon/site.webmanifest" type="image/x-icon"/>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <div class="container">
+        <nav class="header__menu">
+          <a class="logo header__logo" href="#">
+            <img class="logo__img" src="images/icons/simple_food_logo.svg" alt="лого компанії Simple Food">
+          </a>  
+
+          <ul class="menu">
+            <li class="menu__item">
+              <a class="menu__link menu__link--active links-style" href="#">Головна</a>
+            </li>
+  
+            <li class="menu__item">            
+              <a class="menu__link links-style" href="#">Страви</a>
+            </li>
+  
+            <li class="menu__item">            
+              <a class="menu__link links-style" href="#">Контакти</a>
+            </li>
+          </ul>
+
+          <ul class="nav-icons">
+            <li class="nav-icons__item">
+                <button class="nav-icons__link icon-styles" type="button">
+                  <svg class="nav-icons__svg nav-icons__svg--search" stroke="#363853">
+                    <use xlink:href="images/sprite.svg#search_icon"></use>
+                  </svg>
+                </button>
+                <span class="sr-only">Кнопка пошуку</span>
+            </li>
+  
+            <li class="nav-icons__item">
+                <button class="nav-icons__link icon-styles" type="button">
+                  <svg class="nav-icons__svg nav-icons__svg--cart" stroke="#363853">
+                    <use xlink:href="images/sprite.svg#cart-icon"></use>
+                  </svg>
+                  <span class="nav-icons__num">4</span>
+                  <span class="sr-only">Кнопка корзини</span>
+                </button>
+            </li>
+          </ul>
+          <button class="header__burger" type="button">
+            <span class="header__burger-logo"></span>
+            <span class="sr-only">Меню сайту</span>
+          </button>
+        </nav>
+      </div>
+    </div>
+    <div class="header-hidden header-hidden--main">
+      <div class="header-hidden__top">
+        <a class="logo header-hidden__logo" href="#">
+          <img src="images/icons/simple_food_logo.svg" alt="лого компанії Simple Food" width="200" height="39">
+        </a> 
+        <button class="header-hidden__burger" type="button">
+          <span class="header-hidden__btn header-hidden__btn--top"></span>
+          <span class="header-hidden__btn header-hidden__btn--end"></span>
+          <span class="sr-only">Закрити меню</span>
+        </button>
+      </div>
+
+      <ul class="menu">
+        <li class="menu__item">
+          <a class="menu__link menu__link--active links-style" href="#">Головна</a>
+        </li>
+
+        <li class="menu__item">            
+          <a class="menu__link links-style" href="#">Страви</a>
+        </li>
+
+        <li class="menu__item">            
+          <a class="menu__link links-style" href="#">Контакти</a>
+        </li>
+      </ul> 
+
+      <address class="contacts">
+        <ul class="contacts__list">
+          <li class="contacts__item contacts__item--location">
+            <a class="contacts__link links-style" target="_blank" href="#" rel="noopener noreferrer">
+              вул. Т.Г.Шевченка, 1</a>
+          </li>
+          <li class="contacts__item contacts__item--phone">
+            <a class="contacts__link links-style" href="tel:380501112233" rel="noopener noreferrer">
+              380501112233</a>
+          </li>
+          <li class="contacts__item contacts__item--email">
+            <a class="contacts__link links-style" href="mailto:support@sfood.com" rel="noopener noreferrer">
+              support@sfood.com</a>
+          </li> 
+        </ul>
+        <ul class="contacts__social">
+          <li class="contacts__social-item">
+            <a class="contacts__social-link" href="#" rel="noopener noreferrer" >
+              <svg class="contacts__social-svg contacts__social-svg--facebook" fill="#363853">
+                <use xlink:href="images/sprite.svg#facebook"></use>
+              </svg> 
+              <span class="sr-only">Посилання на фейсбук</span>
+            </a>
+          </li>
+          <li class="contacts__social-item">
+            <a class="contacts__social-link" href="#" target="_blank" rel="noopener noreferrer" >
+              <svg class="contacts__social-svg contacts__social-svg--twitter" fill="#363853">
+                <use xlink:href="images/sprite.svg#twitter"></use>
+              </svg>
+              <span class="sr-only">Посилання на твіттер</span>
+            </a>
+          </li>
+          <li class="contacts__social-item">
+            <a class="contacts__social-link" href="#" target="_blank" rel="noopener noreferrer" >
+              <svg class="contacts__social-svg contacts__social-svg--inst" fill="#363853">
+                <use xlink:href="images/sprite.svg#instagram"></use>
+              </svg> 
+              <span class="sr-only">Посилання на інстаграм</span>
+            </a>
+          </li> 
+        </ul>
+      </address>
+    </div>
+  </header>
+  
+  <main class="main">
+    <h1 class="sr-only">Сторінка каталогу інтернет магазину Simple Food, тут ви зможете обрати страву на ваш смак</h1>
+    <section class="path">
+      <div class="container">
+        <h2 class="sr-only">Шлях користувача по сайту</h2>
+        <ul class="breadcrumps">
+          <li class="breadcrumps__item">
+            <a class="breadcrumps__link" href="#">Головна</a>
+          </li>
+          <li class="breadcrumps__item">
+            <span class="breadcrumps__link">Каталог продуктів</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="catalog section">
+      <div class="container">
+        <div class="catalog__top">
+          <h2 class="section-title catalog__title">Каталог продуктів</h2>
+          <div class="catalog__nav">
+            <button class="catalog__hidden-btn icon-styles">
+              <svg class="catalog__hidden-img" fill="#ff6838">
+                <use xlink:href="images/sprite.svg#catalog__hidden-btn"></use>
+              </svg> 
+              <span class="sr-only">Відкрити каталог</span>
+            </button>
+            <form class="catalog__food-form">
+              <select class="catalog__food-select">
+                <option class="catalog__food-option" value="">За назвою</option>
+                <option class="catalog__food-option" value="">2</option>
+                <option class="catalog__food-option" value="">3</option>
+                <option class="catalog__food-option" value="">4</option>
+              </select>
+              <select class="catalog__food-select">
+                <option class="catalog__food-option" value="по 12">по 12</option>
+                <option class="catalog__food-option" value="2">2</option>
+                <option class="catalog__food-option" value="3">3</option>
+                <option class="catalog__food-option" value="4">4</option>
+              </select>
+            </form>
+          </div>
+        </div>
+
+        <div class="catalog__inner">
+          <div class="menu-filter header-hidden filter">
+            <div class="header-hidden__top">
+              <a class="logo header-hidden__logo" href="#">
+                <img src="images/icons/simple_food_logo.svg" alt="лого компанії Simple Food" width="200" height="39">
+              </a> 
+              <button class="header-hidden__burger" type="button">
+                <span class="header-hidden__btn header-hidden__btn--top"></span>
+                <span class="header-hidden__btn header-hidden__btn--end"></span>
+                <span class="sr-only">Закрити меню</span>
+              </button>
+            </div>
+
+            <div class="menu-filter__style">
+              <div class="menu-filter__heading">
+                <h3 class="menu-filter__subtitle">Категорії</h3>
+              </div>
+              <ul class="menu-filter__content">
+                <li class="menu-filter__content-style" data-filter="all">
+                  <button class="menu-filter__content-btn links-style" data-filter="all">Бургери</button>
+                </li>
+                <li class="menu-filter__content-style">
+                  <button class="menu-filter__content-btn links-style" data-filter=".category-c, .categoty-b">Піца</button>
+                </li>
+                <li class="menu-filter__content-style">
+                  <button class="menu-filter__content-btn links-style" data-filter=".category-c">Сендвічі</button>
+                </li>
+                <li class="menu-filter__content-style">
+                  <button class="menu-filter__content-btn links-style" data-filter=".category-a">Азійська кухня</button>
+                </li>
+                <li class="menu-filter__content-style">
+                  <button class="menu-filter__content-btn links-style" data-filter=".category-b">Сети</button>
+                </li>
+                <li class="menu-filter__content-style">
+                  <button class="menu-filter__content-btn links-style" data-filter=".category-d">Європейська кухня</button>
+                </li>
+                <li class="menu-filter__content-style">
+                  <button class="menu-filter__content-btn links-style" data-filter=".category-e">Напої</button>
+                </li>
+                <li class="menu-filter__content-style">
+                  <button class="menu-filter__content-btn links-style" data-filter=".category-e">Алкоголь</button>
+                </li>
+              </ul>
+            </div>
+  
+            <div class="menu-filter__style">
+              <div class="menu-filter__heading">
+                <h3 class="menu-filter__subtitle">Пропозиції</h3>
+              </div>
+              <form class="menu-filter__content-form menu-filter__content">
+                <label class="menu-filter__content-label">
+                  <input class="menu-filter__content-input" type="checkbox">
+                  <span class="checkbox"></span>
+                  Зі знижкою
+                </label>
+                <label class="menu-filter__content-label">
+                  <input class="menu-filter__content-input" type="checkbox">
+                  <span class="checkbox"></span>
+                  Новинка
+                </label>
+                <label class="menu-filter__content-label">
+                  <input class="menu-filter__content-input" type="checkbox">
+                  <span class="checkbox"></span>
+                  Хіт сезону
+                </label>
+              </form>
+            </div>
+  
+            <div class="menu-filter__style">
+              <div class="menu-filter__heading">
+                <h3 class="menu-filter__subtitle">Ціна</h3>
+              </div>
+              <form class="menu-filter__form" action="#">
+                <div class="menu-filter__variables">
+                  <div class="menu-filter__variable">
+                    <label for="from" class="menu-filter__label">від</label>
+                    <input class="menu-filter__input menu-filter__input--from" id="from" type="number">
+                    <label for="from" class="menu-filter__label">₴</label>
+                  </div>
+                  <div class="menu-filter__variable">
+                    <label for="to" class="menu-filter__label">від</label>
+                    <input class="menu-filter__input menu-filter__input--to" id="to" type="number">
+                    <label for="to" class="menu-filter__label">₴</label>
+                  </div>
+                </div>
+                <input class="menu-filter__range" type="text" data-min="0" data-max="1000" data-from="50" data-to="800">
+              </form>
+            </div>
+          </div>
+          
+          <div class="catalog__food-box">
+            <ul class="catalog__food categories">
+              <li class="catalog__item categories__dish-item mix category-b">
+                <article class="product-card">
+                  <img class="product-card__img" src="images/menu/item_01.png" alt="фото чізбургера з листям салату">
+                  <h3 class="product-card__title">Чізбургер з листям салату</h3>
+                  <span class="product-card__price">160 <span class="currency">грн</span></span>
+                  <button class="product-card__btn btn-styles btn-primary" type="button">До кошика</button>
+                </article>
+              </li>
+    
+              <li class="catalog__item categories__dish-item mix category-c">
+                <article class="product-card">
+                  <img class="product-card__img" src="images/menu/item-2.jpg" alt="фото чізбургера з листям салату">
+                  <h3 class="product-card__title">Біфбургер</h3>
+                  <span class="product-card__price">190 <span class="currency">грн</span></span>
+                  <button class="product-card__btn  btn-styles btn-primary" type="button">До кошика</button>
+                </article>
+              </li>
+    
+              <li class="catalog__item categories__dish-item mix category-e">
+                <article class="product-card">
+                  <img class="product-card__img" src="images/menu/item-4.jpg" alt="фото чізбургера з листям салату">
+                  <h3 class="product-card__title">Королівський чізбургер</h3>
+                  <span class="product-card__price">260 <span class="currency">грн</span></span>
+                  <button class="product-card__btn btn-styles btn-primary" type="button">До кошика</button>
+                </article>
+              </li>
+    
+              <li class="catalog__item categories__dish-item mix category-c">
+                <article class="product-card">
+                  <img class="product-card__img" src="images/menu/item-3.jpg" alt="фото чізбургера з листям салату">
+                  <h3 class="product-card__title">Чорний гамбургер</h3>
+                  <span class="product-card__price">199 <span class="currency">грн</span></span>
+                  <button class="product-card__btn btn-styles btn-primary" type="button">До кошика</button>
+                </article>
+              </li>
+    
+              <li class="catalog__item categories__dish-item mix category-e">
+                <article class="product-card">
+                  <img class="product-card__img" src="images/menu/item_01.png" alt="фото чізбургера з листям салату">
+                  <h3 class="product-card__title">Чізбургер з листям салату</h3>
+                  <span class="product-card__price">160 <span class="currency">грн</span></span>
+                  <button class="product-card__btn btn-styles btn-primary" type="button">До кошика</button>
+                </article>
+              </li>
+    
+              <li class="catalog__item categories__dish-item mix category-b catalog__item--adapt">
+                <article class="product-card">
+                  <img class="product-card__img" src="images/menu/item-2.jpg" alt="фото чізбургера з листям салату">
+                  <h3 class="product-card__title">Біфбургер</h3>
+                  <span class="product-card__price">190 <span class="currency">грн</span></span>
+                  <button class="product-card__btn btn-styles btn-primary" type="button">До кошика</button>
+                </article>
+              </li>
+    
+              <li class="catalog__item categories__dish-item mix category-d catalog__item--adapt">
+                <article class="product-card">
+                  <img class="product-card__img" src="images/menu/item-4.jpg" alt="фото чізбургера з листям салату">
+                  <h3 class="product-card__title">Королівський чізбургер</h3>
+                  <span class="product-card__price">260 <span class="currency">грн</span></span>
+                  <button class="product-card__btn btn-styles btn-primary" type="button">До кошика</button>
+                </article>
+              </li>
+
+              <li class="catalog__item categories__dish-item mix category-c">
+                <article class="product-card">
+                  <img class="product-card__img" src="images/menu/item-3.jpg" alt="фото чізбургера з листям салату">
+                  <h3 class="product-card__title">Чорний гамбургер</h3>
+                  <span class="product-card__price">199 <span class="currency">грн</span></span>
+                  <button class="product-card__btn btn-styles btn-primary" type="button">До кошика</button>
+                </article>
+              </li>
+  
+              <li class="catalog__item categories__dish-item mix category-e catalog__item--adapt">
+                <article class="product-card">
+                  <img class="product-card__img" src="images/menu/item_01.png" alt="фото чізбургера з листям салату">
+                  <h3 class="product-card__title">Чізбургер з листям салату</h3>
+                  <span class="product-card__price">160 <span class="currency">грн</span></span>
+                  <button class="product-card__btn btn-styles btn-primary" type="button">До кошика</button>
+                </article>
+              </li>
+    
+              <li class="catalog__item categories__dish-item mix category-b catalog__item--adapt">
+                <article class="product-card">
+                  <img class="product-card__img" src="images/menu/item-2.jpg" alt="фото чізбургера з листям салату">
+                  <h3 class="product-card__title">Біфбургер</h3>
+                  <span class="product-card__price">190 <span class="currency">грн</span></span>
+                  <button class="product-card__btn btn-styles btn-primary" type="button">До кошика</button>
+                </article>
+              </li>
+    
+              <li class="catalog__item categories__dish-item mix category-d catalog__item--adapt">
+                <article class="product-card">
+                  <img class="product-card__img" src="images/menu/item-4.jpg" alt="фото чізбургера з листям салату">
+                  <h3 class="product-card__title">Королівський чізбургер</h3>
+                  <span class="product-card__price">260 <span class="currency">грн</span></span>
+                  <button class="product-card__btn btn-styles btn-primary" type="button">До кошика</button>
+                </article>
+              </li>
+
+              <li class="catalog__item categories__dish-item mix category-c catalog__item--adapt">
+                <article class="product-card">
+                  <img class="product-card__img" src="images/menu/item-3.jpg" alt="фото чізбургера з листям салату">
+                  <h3 class="product-card__title">Чорний гамбургер</h3>
+                  <span class="product-card__price">199 <span class="currency">грн</span></span>
+                  <button class="product-card__btn btn-styles btn-primary" type="button">До кошика</button>
+                </article>
+              </li>
+            </ul>
+            <div class="catalog__pagination">
+              <a class="catalog__pagination-btn">
+                <svg class="catalog__arrow catalog__arrow--prev" fill="#363853">
+                  <use xlink:href="images/sprite.svg#arrow-down"></use>
+                </svg>
+              </a>
+              <ul class="catalog__pagination-list">
+                <li class="catalog__pagination-item">
+                  <span class="catalog__pagination-btn">1</span>
+                </li>
+                <li class="catalog__pagination-item">
+                  <a class="catalog__pagination-btn catalog__pagination-btn--adapt" href="#">2</a>
+                </li>
+                <li class="catalog__pagination-item">
+                  <a class="catalog__pagination-btn" href="#">...</a>
+                </li>
+                <li class="catalog__pagination-item">
+                  <a class="catalog__pagination-btn catalog__pagination-btn--adapt" href="#">9</a>
+                </li>
+                <li class="catalog__pagination-item">
+                  <a class="catalog__pagination-btn" href="#">10</a>
+                </li>
+              </ul>
+              <a class="catalog__pagination-btn">
+                <svg class="catalog__arrow catalog__arrow--next" fill="#363853">
+                  <use xlink:href="images/sprite.svg#arrow-down"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="apps section">
+      <div class="container">
+        <div class="apps__inner">
+          <div class="apps__content">
+            <h2 class="section-title apps__title">Завантажте мобільний застосунок</h2>
+            <p class="apps__text">Ресторани, які ви любите - у ваших руках. Встановлюйте застосунок та замовляйте їжу в зручному місці в зручний час</p>
+            <div class="apps__links">
+              <a href="#" class="apps__link">
+                <img class="link-img" src="images/apps/app_store.jpg" alt="Посилання на завантаження додатку Simple Food з apps-store">
+              </a>
+              <a href="" class="apps__link">
+                <img class="link-img" src="images/apps/play_store.jpg" alt="Посилання на завантаження додатку Simple Food з play-market">
+              </a>
+            </div>
+          </div>
+          <div class="apps__img" style="background-image: url(images/apps/get_app.jpg);">
+            <span class="sr-only">
+              Фото замовлення з Simple Food
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sales section">
+      <div class="container">
+        <h2 class="section-title sales__title">Акції та знижки</h2>
+        <ul class="sales__list">
+          <li class="sales__list-item">
+            <article class="rest-card">
+              <img class="rest-card__img" src="images/sales/sales-img_1.png" alt="фото піци" width="370" height="300">
+              <div class="rest-card__content">
+                <a class="rest-card__name" href="#">
+                  <h3 class="rest-card__subtitle">Знижка на другу піцу</h3>
+                </a>
+              </div>
+            </article>
+          </li>
+
+          <li class="sales__list-item">
+            <article class="rest-card">
+              <img class="rest-card__img" src="images/sales/sales-img_2.png" alt="фото бургера та картоплі"  width="370" height="300">
+              <div class="rest-card__content">
+                <a class="rest-card__name" href="#">
+                  <h3 class="rest-card__subtitle">
+                    Картопелька з KFC задарма при замовленні бургера</h3>
+                </a>
+              </div>
+            </article>
+          </li>
+
+          <li class="sales__list-item">
+            <article class="rest-card">
+              <img class="rest-card__img" src="images/sales/sales-img_3.png" alt="фото бургера з чорною булочкою та картоплею"  width="370" height="300">
+              <div class="rest-card__content">
+                <a class="rest-card__name" href="#">
+                  <h3 class="rest-card__subtitle">Чорні бургери на чорний день</h3>
+                </a>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+          <div class="footer-inner">
+              <a class="footer__logo logo" href="#">
+                <img class="logo__img" src="images/icons/simple_food_logo.svg" alt="лого компанії Simple Food">
+              </a>
+              <form class="form-subscribe" action="#">
+                <input class="form-subscribe__input" type="email" placeholder="Ваш e-mail" name="email" required>
+                <button class="form-subscribe__btn btn-primary btn-styles" type="submit">
+                  <svg class="form-subscribe__svg" fill="#ffffff">
+                    <use xlink:href="images/sprite.svg#send"></use>
+                  </svg>                 
+                  Підписатися
+                </button>
+              </form>
+          </div>
+
+          <nav class="footer-menu">
+            <ul class="footer-menu__list">
+              <li class="footer-menu__item">
+                <a class="footer-menu__link links-style" href="#">Як це працює</a>
+              </li>
+  
+              <li class="footer-menu__item">
+                <a class="footer-menu__link links-style" href="#">Продукти</a>
+              </li>
+  
+              <li class="footer-menu__item">
+                <a class="footer-menu__link links-style" href="#">Страви</a>
+              </li>
+  
+              <li class="footer-menu__item">
+                <a class="footer-menu__link links-style" href="#">Меню</a>
+              </li>
+  
+              <li class="footer-menu__item">
+                <a class="footer-menu__link links-style" href="#">Про нас</a>
+              </li>
+  
+              <li class="footer-menu__item">
+                <a class="footer-menu__link links-style" href="#">Новини</a>
+              </li>
+  
+              <li class="footer-menu__item">
+                <a class="footer-menu__link links-style" href="#">Партнери</a>
+              </li>
+  
+              <li class="footer-menu__item">
+                <a class="footer-menu__link links-style" href="#">ЧаПи</a>
+              </li>
+  
+              <li class="footer-menu__item">
+                <a class="footer-menu__link links-style" href="#">Застосунок</a>
+              </li>
+  
+              <li class="footer-menu__item">
+                <a class="footer-menu__link links-style" href="#">Блог</a>
+              </li>
+  
+              <li class="footer-menu__item">
+                <a class="footer-menu__link links-style" href="#">Що нового?</a>
+              </li>
+  
+              <li class="footer-menu__item">
+                <a class="footer-menu__link links-style" href="#">Мапа сайту</a>
+              </li>
+            </ul>
+          </nav>
+
+          <address class="contacts">
+            <ul class="contacts__list">
+              <li class="contacts__item contacts__item--location">
+                <a class="contacts__link links-style" target="_blank" href="#" rel="noopener noreferrer">
+                  вул. Т.Г.Шевченка, 1</a>
+              </li>
+              <li class="contacts__item contacts__item--phone">
+                <a class="contacts__link links-style" href="tel:380501112233" rel="noopener noreferrer">
+                  380501112233</a>
+              </li>
+              <li class="contacts__item contacts__item--email">
+                <a class="contacts__link links-style" href="mailto:support@sfood.com" rel="noopener noreferrer">
+                  support@sfood.com</a>
+              </li> 
+            </ul>
+            <ul class="contacts__social">
+              <li class="contacts__social-item">
+                <a class="contacts__social-link" href="#" rel="noopener noreferrer" >
+                  <svg class="contacts__social-svg contacts__social-svg--facebook" fill="#363853">
+                    <use xlink:href="images/sprite.svg#facebook"></use>
+                  </svg> 
+                  <span class="sr-only">Посилання на фейсбук</span>
+                </a>
+              </li>
+              <li class="contacts__social-item">
+                <a class="contacts__social-link" href="#" target="_blank" rel="noopener noreferrer" >
+                  <svg class="contacts__social-svg contacts__social-svg--twitter" fill="#363853">
+                    <use xlink:href="images/sprite.svg#twitter"></use>
+                  </svg>
+                  <span class="sr-only">Посилання на твіттер</span>
+                </a>
+              </li>
+              <li class="contacts__social-item">
+                <a class="contacts__social-link" href="#" target="_blank" rel="noopener noreferrer" >
+                  <svg class="contacts__social-svg contacts__social-svg--inst" fill="#363853">
+                    <use xlink:href="images/sprite.svg#instagram"></use>
+                  </svg> 
+                  <span class="sr-only">Посилання на інстаграм</span>
+                </a>
+              </li> 
+            </ul>
+          </address>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-bottom__text">© 2023 Simple Food</p>
+    </div>
+  </footer>
+  <script src="js/main.min.js"></script>
+</body>
+</html>
