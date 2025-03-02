@@ -22,11 +22,11 @@
 
           <ul class="menu">
             <li class="menu__item">
-              <a class="menu__link menu__link--active links-style" href="#">Головна</a>
+              <a class="menu__link menu__link links-style" href="#">Головна</a>
             </li>
   
             <li class="menu__item">            
-              <a class="menu__link links-style" href="#">Страви</a>
+              <a class="menu__link menu__link--active links-style" href="#">Страви</a>
             </li>
   
             <li class="menu__item">            
@@ -153,7 +153,7 @@
         <div class="catalog__top">
           <h2 class="section-title catalog__title">Каталог продуктів</h2>
           <div class="catalog__nav">
-            <button class="catalog__hidden-btn icon-styles">
+            <button class="catalog__hidden-btn icon-styles" type="button">
               <svg class="catalog__hidden-img" fill="#ff6838">
                 <use xlink:href="images/sprite.svg#catalog__hidden-btn"></use>
               </svg> 
@@ -195,28 +195,28 @@
               </div>
               <ul class="menu-filter__content">
                 <li class="menu-filter__content-style" data-filter="all">
-                  <button class="menu-filter__content-btn links-style" data-filter="all">Бургери</button>
+                  <a class="menu-filter__content-btn menu-filter__content-btn--active links-style" data-filter="all">Бургери</a>
                 </li>
                 <li class="menu-filter__content-style">
-                  <button class="menu-filter__content-btn links-style" data-filter=".category-c, .categoty-b">Піца</button>
+                  <a class="menu-filter__content-btn links-style" data-filter=".category-c, .categoty-b">Піца</a>
                 </li>
                 <li class="menu-filter__content-style">
-                  <button class="menu-filter__content-btn links-style" data-filter=".category-c">Сендвічі</button>
+                  <a class="menu-filter__content-btn links-style" data-filter=".category-c">Сендвічі</a>
                 </li>
                 <li class="menu-filter__content-style">
-                  <button class="menu-filter__content-btn links-style" data-filter=".category-a">Азійська кухня</button>
+                  <a class="menu-filter__content-btn links-style" data-filter=".category-a">Азійська кухня</a>
                 </li>
                 <li class="menu-filter__content-style">
-                  <button class="menu-filter__content-btn links-style" data-filter=".category-b">Сети</button>
+                  <a class="menu-filter__content-btn links-style" data-filter=".category-b">Сети</a>
                 </li>
                 <li class="menu-filter__content-style">
-                  <button class="menu-filter__content-btn links-style" data-filter=".category-d">Європейська кухня</button>
+                  <a class="menu-filter__content-btn links-style" data-filter=".category-d">Європейська кухня</a>
                 </li>
                 <li class="menu-filter__content-style">
-                  <button class="menu-filter__content-btn links-style" data-filter=".category-e">Напої</button>
+                  <a class="menu-filter__content-btn links-style" data-filter=".category-e">Напої</a>
                 </li>
                 <li class="menu-filter__content-style">
-                  <button class="menu-filter__content-btn links-style" data-filter=".category-e">Алкоголь</button>
+                  <a class="menu-filter__content-btn links-style" data-filter=".category-e">Алкоголь</a>
                 </li>
               </ul>
             </div>
@@ -252,12 +252,12 @@
                 <div class="menu-filter__variables">
                   <div class="menu-filter__variable">
                     <label for="from" class="menu-filter__label">від</label>
-                    <input class="menu-filter__input menu-filter__input--from" id="from" type="number">
+                    <input class="menu-filter__input menu-filter__input--from" id="from" type="text">
                     <label for="from" class="menu-filter__label">₴</label>
                   </div>
                   <div class="menu-filter__variable">
                     <label for="to" class="menu-filter__label">від</label>
-                    <input class="menu-filter__input menu-filter__input--to" id="to" type="number">
+                    <input class="menu-filter__input menu-filter__input--to" id="to" type="text">
                     <label for="to" class="menu-filter__label">₴</label>
                   </div>
                 </div>
@@ -377,11 +377,11 @@
               </li>
             </ul>
             <div class="catalog__pagination">
-              <a class="catalog__pagination-btn">
+              <span class="catalog__pagination-btn catalog__pagination-btn--disabled">
                 <svg class="catalog__arrow catalog__arrow--prev" fill="#363853">
                   <use xlink:href="images/sprite.svg#arrow-down"></use>
                 </svg>
-              </a>
+              </span>
               <ul class="catalog__pagination-list">
                 <li class="catalog__pagination-item">
                   <span class="catalog__pagination-btn">1</span>
@@ -390,7 +390,7 @@
                   <a class="catalog__pagination-btn catalog__pagination-btn--adapt" href="#">2</a>
                 </li>
                 <li class="catalog__pagination-item">
-                  <a class="catalog__pagination-btn" href="#">...</a>
+                  <span class="catalog__pagination-btn" href="#">...</span>
                 </li>
                 <li class="catalog__pagination-item">
                   <a class="catalog__pagination-btn catalog__pagination-btn--adapt" href="#">9</a>

@@ -26,7 +26,7 @@
             </li>
   
             <li class="menu__item">            
-              <a class="menu__link links-style" href="#">Страви</a>
+              <a class="menu__link menu__link--active links-style" href="#">Страви</a>
             </li>
   
             <li class="menu__item">            
@@ -191,7 +191,7 @@
               <div class="product__content">
                 <h2 class="product__title section-title">Чізбургер з листям салату</h2>
                 <div class="product__star" data-rateyo-rating="4"></div>
-                <p class="product__price">160 <span class="currency">грн.</span></p>
+                <span class="product__price">160 <span class="currency">грн.</span></span>
                 <div class="product__action-box">
                   <input class="product__input-field" type="number" value="1" min="1">
                   <button class="product__cart-btn btn-styles btn-primary" type="button">
@@ -201,12 +201,20 @@
                     Додати до кошика</button>
                 </div>
                 <h3 class="product__subtitle">Доставка та оплата</h3>
-                <div class="product__detail">
-                  <p class="product__text">Мінімальна сума замовлення — 160 грн.</p>
-                  <p class="product__text">Час доставки замовлення — 80-140 мин.</p>
-                  <p class="product__text">Оплата здійснюється тільки банківською карткою.</p>
-                  <p class="product__text">Остаточна сума замовлення формується після збору товарів.</p>
-                </div>
+                <ul class="product__detail">
+                  <li class="product__item-text">
+                    <p class="product__text">Мінімальна сума замовлення — 160 грн.</p>
+                  </li>
+                  <li class="product__item-text">
+                    <p class="product__text">Час доставки замовлення — 80-140 мин.</p>
+                  </li>
+                  <li class="product__item-text">
+                    <p class="product__text">Оплата здійснюється тільки банківською карткою.</p>
+                  </li>
+                  <li class="product__item-text">
+                    <p class="product__text">Остаточна сума замовлення формується після збору товарів.</p>
+                  </li>
+                </ul>
                 <a class="btn-detail links-style" href="#">
                   Детальніше
                 </a>

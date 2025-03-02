@@ -33,7 +33,7 @@ body {
     right: 0;
     top: 0;
     bottom: 0;
-    z-index: 3;
+    z-index: 10;
     background-color: rgba($black-color, 0.5);
     transition: background-color 0.3s ease, opacity 0.3s ease;
   }
@@ -50,7 +50,7 @@ body {
 .header__inner.sticky {
   padding: 20px 0;
   background-color: $white-color;
-  z-index: 3;
+  z-index: 12;
   @include mq("phone") {
     padding: 10px 0;
   }
