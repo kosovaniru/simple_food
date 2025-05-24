@@ -1,0 +1,14 @@
+.path {
+  @include mq("phone") {
+    margin-bottom: 20px;
+  }
+  .list {
+    padding: 24px 0;
+    line-height: 1.2;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+  &__link {
+    white-space: nowrap;
+  }
+}

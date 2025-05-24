@@ -1,0 +1,40 @@
+.nav-icons {
+  display: flex;
+  gap: 12px;
+
+  &__link {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    @extend %flex-style;
+    justify-content: center;
+  }
+
+  &__svg {
+    stroke: $default-color;
+    stroke-width: 1.5;
+    transition: fill 0.3s;
+
+    &--search {
+      width: 19px;
+      height: 19px;
+    }
+
+    &--cart {
+      width: 19px;
+      height: 18px;
+    }
+  }
+
+  &__num {
+    position: absolute;
+    padding: 2px 4px;
+    border-radius: 100%;
+    background-color: $accent-color;
+    top: 9px;
+    left: 26px;
+    font-size: 10px;
+    color: $white-color;
+    line-height: 1;
+  }
+}

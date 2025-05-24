@@ -1,0 +1,58 @@
+@import "reset";
+@import "fonts";
+@import "vars";
+@import "mixin";
+@import "global";
+
+.product-card {
+  display: flex;
+  align-items: center;
+  min-height: 299px;
+  height: 100%;
+  padding: 20px 15px;
+  @extend %fl_al-style;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 0 0 1px $background-light;
+  border-radius: 5px;
+  background-color: $white-color;
+  transition: box-shadow 0.3s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      box-shadow: 0 0 0 1px $accent-color;
+    }
+  }
+
+  &__img {
+    margin: 0 auto;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+  }
+
+  &__title {
+    font-size: 15px;
+    color: $neutral-color;
+    line-height: 1.2;
+    margin-bottom: auto;
+  }
+
+  &__price {
+    display: block;
+    font-weight: 500;
+    line-height: 1.4;
+    font-size: 15px;
+    color: $default-color;
+    margin-top: auto;
+  }
+
+  &__btn {
+    display: inline-block;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.3;
+    padding: 7px 14px;
+    transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
+  }
+}

@@ -1,0 +1,23 @@
+.menu {
+  display: flex;
+  gap: 39px;
+  @include mq("tablet") {
+    display: none;
+  }
+  @include mq("phone") {
+    display: 10px;
+  }
+
+  &__item {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  &__link {
+    border: 1px solid transparent;
+
+    &--active {
+      color: $accent-color;
+    }
+  }
+}

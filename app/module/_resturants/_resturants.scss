@@ -1,0 +1,81 @@
+.resturants {
+  @include mq("desktop") {
+    .rest-card {
+      max-width: 312px;
+      width: 100%;
+    }
+  }
+  @include mq("tablet") {
+    margin: 0 auto;
+  }
+  @include mq("phone") {
+    max-width: 345px;
+    width: 100%;
+  }
+  &__list {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    @include mq("desktop") {
+      justify-content: center;
+      gap: 15px;
+    }
+    @include mq("tablet") {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5px;
+    }
+    @include mq("tablet-2") {
+      display: flex;
+      gap: 15px;
+    }
+    @include mq("phone") {
+      gap: 26px;
+    }
+
+    .slick-dots {
+      content: "";
+      font-size: 0;
+      display: flex;
+      gap: 15px;
+      width: fit-content;
+      height: 15px;
+      margin: 0 auto;
+      position: relative;
+
+      li {
+        border-radius: 100%;
+        background-color: $medium-gray;
+        width: 15px;
+        height: 15px;
+
+        &:focus {
+          box-shadow: 0 0 0 2px $accent-color;
+        }
+
+        @media (any-hover: hover) {
+          &:hover {
+            background-color: $active-color;
+            box-shadow: 0 0 0 2px rgba($accent-color, 0.5);
+          }
+        }
+
+        &:active {
+          background-color: rgba($accent-color, 0.5);
+        }
+      }
+
+      .slick-active {
+        background-color: $accent-color;
+      }
+    }
+  }
+  &__item {
+    width: fit-content;
+  }
+
+  &__name {
+    margin-bottom: 16px;
+  }
+}

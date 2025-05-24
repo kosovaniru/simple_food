@@ -1,0 +1,111 @@
+.header {
+  &__inner {
+    padding: 54px 0;
+    z-index: 1;
+    transition: padding 0.3s;
+    @include mq("desktop") {
+      padding: 45px 0;
+    }
+    @include mq("tablet-2") {
+      padding: 40px 0;
+    }
+    @include mq("tablet") {
+      padding: 30px 0;
+    }
+    @include mq("phone") {
+      padding: 25px 0;
+    }
+  }
+
+  &__menu {
+    @extend %flex-style;
+    gap: 52px;
+    @include mq("tablet") {
+      gap: 20px;
+    }
+    @include mq("phone") {
+      align-items: center;
+      height: 23px;
+      gap: 8px;
+    }
+  }
+
+  &__logo {
+    margin-right: auto;
+    padding-left: 4px;
+    @include mq("phone") {
+      width: 115px;
+      height: 23px;
+    }
+  }
+
+  .logo__img {
+    @include mq("phone") {
+      width: 115px;
+      height: 23px;
+    }
+  }
+
+  &__burger {
+    display: none;
+    width: 44px;
+    height: 44px;
+    position: relative;
+
+    @include mq("tablet") {
+      display: block;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba($accent-color, 0.7);
+      background-color: rgba(255, 104, 56, 0.1);
+      border-radius: 5px;
+      .header__burger-logo,
+      .header__burger-logo::before,
+      .header__burger-logo::after {
+        background-color: $white-color;
+      }
+    }
+
+    &:active {
+      .header__burger-logo,
+      .header__burger-logo::before,
+      .header__burger-logo::after {
+        background-color: $accent-color;
+      }
+    }
+  }
+
+  &__burger-logo {
+    @extend %logo;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    &:active {
+      background-color: $accent-color;
+    }
+
+    &::after,
+    &::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      left: 0;
+      background-color: $default-color;
+      position: absolute;
+
+      &:active {
+        background-color: $accent-color;
+      }
+    }
+
+    &::before {
+      top: 12px;
+    }
+
+    &::after {
+      bottom: 12px;
+    }
+  }
+}

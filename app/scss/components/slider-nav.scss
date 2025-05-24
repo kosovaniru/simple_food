@@ -1,0 +1,89 @@
+.slider-nav {
+  &--clients {
+    display: block;
+    width: fit-content;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+
+    @include mq("phone") {
+      top: 117px;
+    }
+  }
+
+  &--interest {
+    position: absolute;
+    right: 0;
+    top: 0px;
+  }
+
+  &__btn {
+    border-radius: 50%;
+    border: 3px solid $medium-gray;
+    width: 39px;
+    height: 39px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba($accent-color, 0.7);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        fill: rgba($accent-color, 0.5);
+        background-color: $active-color;
+        border-color: rgba($accent-color, 0.5);
+        .slider-arrow {
+          fill: rgba($accent-color, 0.5);
+        }
+      }
+    }
+
+    &:active {
+      background-color: $active-color;
+      border-color: $active-color;
+      .slider-arrow {
+        fill: $accent-color;
+      }
+    }
+
+    &--prev {
+      position: absolute;
+      left: 50%;
+      bottom: -14px;
+      transform: translate(-113px);
+      @include mq("phone") {
+        transform: translate(-137px);
+      }
+    }
+
+    &--next {
+      position: absolute;
+      right: 50%;
+      bottom: -14px;
+      transform: translate(113px);
+      @include mq("phone") {
+        transform: translate(137px);
+      }
+    }
+  }
+
+  .slick-disabled {
+    border: 3px solid $accent-color;
+
+    .slider-nav__arrow {
+      fill: $accent-color;
+    }
+  }
+
+  &__arrow {
+    width: 18px;
+    height: 19px;
+
+    &--left {
+      transform: rotate(180deg);
+    }
+  }
+}

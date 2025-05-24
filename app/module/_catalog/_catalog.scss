@@ -1,0 +1,230 @@
+.catalog {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 51px;
+    @include mq("tablet-2") {
+      margin-bottom: 50px;
+    }
+    @include mq("tablet") {
+      margin-bottom: 30px;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__title {
+    margin: 1px auto 0 0;
+  }
+
+  &__nav {
+    @extend %fl_al-style;
+    gap: 20px;
+  }
+
+  &__hidden-btn {
+    border-radius: 3px;
+    width: 47px;
+    height: 47px;
+    background-color: $button-color;
+    @extend %fl_al-style;
+    justify-content: center;
+    display: none;
+    @extend %img-style;
+    @include mq("tablet") {
+      display: flex;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba($accent-color, 0.7);
+    }
+
+    &:active {
+      background-color: $accent-color;
+
+      .menu-filter__hidden-img {
+        fill: $white-color;
+      }
+    }
+  }
+
+  &__hidden-img {
+    width: 25px;
+    height: 36px;
+  }
+
+  &__food-form {
+    display: flex;
+    gap: 20px;
+  }
+
+  .jq-selectbox {
+    @media (any-hover: hover) {
+      &:hover {
+        border-color: $accent-color;
+        color: $accent-color;
+        .jq-selectbox__trigger-arrow {
+          filter: invert(54%) sepia(46%) saturate(4144%) hue-rotate(338deg)
+            brightness(104%) contrast(101%);
+        }
+      }
+    }
+
+    &__select {
+      padding: 14px 41px 15px 16px;
+      border: 1px solid $medium-gray;
+      background-color: $white-color;
+      border-radius: 3px;
+      border: 1px solid $medium-gray;
+      line-height: 1.2;
+      position: relative;
+      z-index: 1;
+      transition: border-color 0.3s, color 0.3s;
+
+      &:focus {
+        border-color: $accent-color;
+      }
+    }
+
+    &__trigger {
+      position: absolute;
+      right: 0;
+      top: 47%;
+      right: 15px;
+    }
+
+    &__select-text {
+      line-height: 1.2;
+    }
+
+    &__trigger-arrow {
+      top: 4px;
+      width: 11px;
+      height: 6px;
+      border: none;
+      background-image: url(../images/icons/arrow-down.svg);
+      stroke: $accent-color;
+      @extend %img-style;
+    }
+
+    &__dropdown {
+      border: 1px solid #c2c2c2;
+      position: absolute;
+      border-radius: 3px;
+      padding: 23px 5px 5px 5px;
+      width: 100%;
+      left: 0;
+      top: 35px;
+      background-color: $white-color;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 28px;
+    @include mq("desktop") {
+      gap: 13px;
+    }
+    @include mq("tablet") {
+      justify-content: center;
+    }
+  }
+
+  .header-hidden__top {
+    display: none;
+  }
+
+  &__food {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 13px;
+    margin-bottom: 60px;
+    @include mq("tablet-2") {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include mq("tablet") {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include mq("phone") {
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 28px;
+      gap: 5px;
+      row-gap: 10px;
+    }
+  }
+
+  &__item {
+    @include mq("phone") {
+      &--adapt {
+        display: none;
+      }
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  &__pagination-btn {
+    width: 48px;
+    height: 48px;
+    background-color: $active-color;
+    border-radius: 3px;
+    font-size: 18px;
+    color: $default-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: box-shadow 0.3s;
+    &--disabled &:focus {
+      box-shadow: 0 0 0 2px $accent-color;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: $accent-color;
+        color: $white-color;
+
+        .catalog__arrow {
+          fill: $white-color;
+        }
+      }
+    }
+
+    &:active {
+      box-shadow: inset 0 -1px 4px 2px rgba($black-color, 0.15);
+    }
+
+    &--adapt {
+      @include mq("phone") {
+        display: none;
+      }
+    }
+  }
+
+  &__pagination-list {
+    display: flex;
+    gap: 6px;
+    @include mq("phone") {
+      gap: 3px;
+    }
+  }
+
+  &__arrow {
+    width: 18px;
+    height: 18px;
+
+    &--prev {
+      transform: rotate(90deg);
+    }
+
+    &--next {
+      transform: rotate(-90deg);
+    }
+  }
+}

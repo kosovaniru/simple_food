@@ -1,4 +1,5 @@
 $(function() {
+
   $('.catalog__food-select, .product__input-field').styler();
 
   $('.clients__slider').slick({
@@ -18,8 +19,8 @@ $(function() {
   });
 
   $(window).on('load resize', function() {
-    if ($(window).width() < 775) {
-      $('.resturants:not(.slick-initialized)').slick({
+    if ($(window).width() < 768) {
+      $('.resturants__list:not(.slick-initialized)').slick({
         arrows: false,
         dots: true,
         infinite: true,
@@ -83,53 +84,50 @@ $(function() {
           arrows: false
         }
       },
+      {
+        breakpoint: 560, 
+        settings: {
+          slidesToShow: 1, 
+          arrows: false,
+          dots: true,
+        }
+      },
     ]
   });
+
+  function toggleBodyLock(lock) {
+    if (lock) {
+      $('body').addClass('lock');
+    } else {
+      $('body').removeClass('lock')
+    }
+  }
+
+  function closeMenus() {
+    $('.header-hidden--main').removeClass('active');
+    $('.menu-filter').removeClass('active');
+    toggleBodyLock(false);
+  }
   
   $('.header__burger').on('click', function () {
-    $('.header-hidden--main').toggleClass('active'); 
-  
-    if ($('.header-hidden--main').hasClass('active')) {
-      $('body').addClass('lock'); 
-    } else { 
-      $('body').removeClass('lock'); 
-    }
-  }),
+    $('.header-hidden--main').toggleClass('active');
+    toggleBodyLock($('.header-hidden--main').hasClass('active'));
+  });
 
   $('.catalog__hidden-btn').on('click', function () {
-    $('.menu-filter').toggleClass('active'); 
-
-    if ($('.menu-filter').hasClass('active')) {
-      $('body').addClass('lock'); 
-    } else { 
-      $('body').removeClass('lock'); 
-    }
+    $('.menu-filter').toggleClass('active');
+    toggleBodyLock($('.menu-filter').hasClass('active'));
   });
 
   $('.header-hidden__burger').on('click', function () {
-    $('.header-hidden--main').removeClass('active');
-    $('body').removeClass('lock');
-  })
-
-  $('.header-hidden__burger').on('click', function () {
-  $('.menu-filter').removeClass('active');
-  $('body').removeClass('lock');
+    closeMenus();
   })
 
   $(document).on('click', function (event) {
     if (
-      !$('.header-hidden--main').is(event.target) &&
-      $('.header-hidden--main').has(event.target).length === 0 &&
-      !$('.header__burger').is(event.target) && 
-      $('.header-burger').has(event.target).length === 0 &&
-      !$('.menu-filter').is(event.target) &&
-      $('.menu-filter').has(event.target).length === 0 &&
-      !$('.catalog__hidden-btn').is(event.target) &&
-      $('.catalog__hidden-btn').has(event.target).length === 0
+      !$(event.target).closest('.header-hidden--main, .header__burger, .menu-filter, .catalog__hidden-btn').length
     ) {
-      $('.header-hidden--main').removeClass('active');
-      $('.menu-filter').removeClass('active');
-      $('body').removeClass('lock')
+      closeMenus();
     }
   });
 
@@ -215,8 +213,28 @@ $('.product__slider').slick({
   ]
 });
 
-$('.product__slider').on('afterChange', function () {
-  Fancybox.bind("[data-fancybox='gallery']");
+var myCarousel = new Carousel($("#burgerCarousel")[0], {
+  preload: 2,
+  dots: true
+});
+
+$("[data-fancybox='gallery']").fancybox({
+  Thumbs: false,
+  Toolbar: false,
+  closeButton:
+    '<button class="carousel__button fancybox__button--close" tabindex="0" data-fancybox-close="" title="Close">' +
+    '<svg viewBox="0 0 24 24" role="img" tabindex="-1" xmlns="http://www.w3.org/2000/svg">' +
+    '<path d="M20 20L4 4m16 0L4 20"></path></svg></button>',
+  Carousel: {
+    Dots: true,
+    on: {
+      change: function (that) {
+        myCarousel.slideTo(myCarousel.findPageForSlide(that.page), {
+          friction: 0,
+        });
+      }
+    }
+  }
 });
 
 $('.tabs__top-link').on('click', function(e) {
@@ -236,8 +254,36 @@ Fancybox.bind("[data-fancybox='gallery']", {
   },
   animationEffect: "zoom-in-out",
 });
-
 })
 
 
 const mixer = mixitup('.categories__content')
+document.addEventListener('DOMContentLoaded', ()=> {
+  const categoriesContent = document.querySelector('.categories__content');
+
+  if (categoriesContent) {
+    const mixer = mixitup('.categories__content')
+  }
+})
+
+// const myCarousel = new Carousel(document.querySelector("#burgerCarousel"), {
+//   preload: 2,
+//   Dots: true
+// });
+
+// Fancybox.bind('[data-fancybox="gallery"]', {
+//   Thumbs: false,
+//   Toolbar: false,
+
+//   closeButton: '<button class="carousel__button fancybox__button--close" tabindex="0" data-fancybox-close="" title="Close"><svg viewBox="0 0 24 24" role="img" tabindex="-1" xmlns="http://www.w3.org/2000/svg"><path d="M20 20L4 4m16 0L4 20"></path></svg></button>',
+//   Carousel: {
+//     Dots: true,
+//     on: {
+//       change: (that) => {
+//         myCarousel.slideTo(myCarousel.findPageForSlide(that.page), {
+//           friction: 0,
+//         })
+//       }
+//     }
+//   } 
+// });

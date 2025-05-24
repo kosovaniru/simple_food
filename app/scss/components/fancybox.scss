@@ -1,0 +1,20 @@
+.fancybox {
+  &__carousel {
+    margin: 54px 96px;
+    background-color: $white-color;
+    border-radius: 15px;
+
+    .carousel__button svg {
+      stroke: #505050;
+    }
+  }
+
+  &__thumb {
+    content: "";
+    background-color: $medium-gray;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-image: none;
+  }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог - Simple Food</title>
+  <link rel="icon" href="images/favicon/favicon-96x96.png" sizes="96x96" type="image/x-icon"/>
+  <link rel="icon" href="images/favicon/favicon.svg" type="image/x-icon" />
+  <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" type="image/x-icon"/>
+  <link rel="manifest" href="images/favicon/site.webmanifest" type="image/x-icon"/>
+  <link rel="stylesheet" href="css/catalog.min.css">
+</head>
+<body>
+  {% include 'app/module/_header/_header.html' %}
+  
+  <main class="main">
+    <h1 class="sr-only">Сторінка каталогу інтернет магазину Simple Food, тут ви зможете обрати страву на ваш смак</h1>
+
+    {% include 'app/module/_path/_path.html' %}
+
+    {% include 'app/module/_catalog/_catalog.html' %} 
+
+    {% include 'app/module/_apps/_apps.html' %}
+
+    {% include 'app/module/_sales/_sales.html' %}
+  </main>
+
+  {% include 'app/module/_footer/_footer.html' %}
+
+  <script src="js/main.min.js"></script>
+</body>
+</html>

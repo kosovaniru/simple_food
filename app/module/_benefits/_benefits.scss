@@ -1,0 +1,148 @@
+.benefits {
+  &__inner {
+    @extend %flex-style;
+    gap: 15px;
+    padding: 0 70px;
+    @include mq("tablet") {
+      width: fit-content;
+      margin: 0 auto;
+      gap: 0;
+      height: 585px;
+    }
+    @include mq("phone") {
+      display: block;
+      padding: 0;
+      height: 462px;
+    }
+  }
+
+  &__img {
+    @extend %img-style;
+    background-size: contain;
+    width: 440px;
+    height: 585px;
+    @include mq("desktop") {
+      height: 450px;
+    }
+    @include mq("tablet-2") {
+      height: 370px;
+    }
+    @include mq("tablet") {
+      position: absolute;
+      opacity: 17%;
+      z-index: -1;
+      width: 440px;
+      height: 585px;
+      background-size: cover;
+    }
+    @include mq("phone") {
+      height: 462px;
+      width: 348px;
+    }
+  }
+
+  &__content {
+    max-width: 470px;
+    width: 100%;
+    position: relative;
+    @include mq("tablet") {
+      max-width: 350px;
+    }
+    @include mq("phone") {
+      padding: 25px 0 31px;
+    }
+  }
+
+  &__content-title {
+    margin-bottom: 30px;
+    @include mq("phone") {
+      margin-bottom: 29px;
+    }
+  }
+
+  &__content-text {
+    margin-bottom: 30px;
+    @include mq("tablet-2") {
+      margin-bottom: 25px;
+    }
+    @include mq("tablet") {
+      max-width: 350px;
+    }
+    @include mq("phone") {
+      margin-bottom: 26px;
+      font-size: 18px;
+    }
+  }
+
+  &__content-button {
+    letter-spacing: 0.03em;
+    margin-top: 10px;
+    @include mq("desktop") {
+      margin-top: 8px;
+    }
+    @include mq("tablet-2") {
+      margin-top: 6px;
+    }
+    @include mq("tablet") {
+      margin-top: 3px;
+    }
+    @include mq("phone") {
+      margin-top: 0px;
+    }
+  }
+
+  &__detail {
+    margin-bottom: 23px;
+  }
+
+  &__detail-item {
+    color: $default-color;
+    font-size: 24px;
+    @extend %fl_al-style;
+    padding-left: 64px;
+    position: relative;
+    @include mq("phone") {
+      padding-left: 44px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 34px;
+      height: 34px;
+      position: absolute;
+      left: 0;
+      @extend %img-style;
+    }
+
+    &--timer::before {
+      background-image: url(../images/sprite.svg#timer-icon);
+    }
+
+    &--courier::before {
+      background-image: url(../images/sprite.svg#delivery-icon);
+    }
+
+    &--resturant::before {
+      background-image: url(../images/sprite.svg#resturant-icon);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 18px;
+      @include mq("phone") {
+        margin-bottom: 21px;
+      }
+    }
+  }
+  &__detail-text {
+    @include mq("desktop") {
+      font-size: 22px;
+    }
+    @include mq("tablet-2") {
+      font-size: 20px;
+    }
+    @include mq("phone") {
+      font-size: 18px;
+    }
+  }
+}
